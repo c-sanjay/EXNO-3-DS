@@ -38,7 +38,7 @@ import pandas as pd
 df=pd.read_csv("Encoding Data.csv")
 df
 ```
-<img width="627" height="434" alt="image" src="https://github.com/user-attachments/assets/e24422b3-ee5c-4b5a-b32f-09a8963cb59e" />
+<img width="343" height="435" alt="image" src="https://github.com/user-attachments/assets/b1fc448e-a1fc-42db-b6f9-c7cc9f71630a" />
 
 ```py
 from sklearn.preprocessing import LabelEncoder,OrdinalEncoder
@@ -46,13 +46,13 @@ pm=['Hot','Warm','Cold']
 e1=OrdinalEncoder(categories=[pm])
 e1.fit_transform(df[["ord_2"]])
 ```
-<img width="357" height="224" alt="image" src="https://github.com/user-attachments/assets/6d9a20d8-b4c6-4152-bf23-6f840261cbec" />
+<img width="158" height="231" alt="image" src="https://github.com/user-attachments/assets/259ad1ce-a0de-48d4-9c64-9827959dec5b" />
 
 ```py
 df['bo2']=e1.fit_transform(df[["ord_2"]])
 df
 ```
-<img width="608" height="430" alt="image" src="https://github.com/user-attachments/assets/4e74f0de-5e54-408f-bd2a-35ed5134e218" />
+<img width="384" height="437" alt="image" src="https://github.com/user-attachments/assets/ff3bfec5-f316-4c67-8aae-2817afc48261" />
 
 ```py
 le=LabelEncoder()
@@ -60,7 +60,7 @@ dfc=df.copy()
 dfc['ord_2']=le.fit_transform(dfc['ord_2'])
 dfc
 ```
-<img width="489" height="421" alt="image" src="https://github.com/user-attachments/assets/568f6341-11aa-436b-8398-c8e02f7eb60b" />
+<img width="386" height="371" alt="image" src="https://github.com/user-attachments/assets/cf7e1daf-797f-4428-a921-bcb583510958" />
 
 ```py
 from sklearn.preprocessing import OneHotEncoder
@@ -70,32 +70,31 @@ enc=pd.DataFrame(ohe.fit_transform(df2[["nom_0"]]))
 df2=pd.concat([df2,enc],axis=1)
 df2
 ```
-<img width="586" height="439" alt="image" src="https://github.com/user-attachments/assets/dfb39ef6-6710-42c1-ad45-3fea72161229" />
+<img width="522" height="442" alt="image" src="https://github.com/user-attachments/assets/ab283076-5d63-4f89-936f-61d24f7f1053" />
 
 ```py
 pd.get_dummies(df2,columns=["nom_0"])
 ```
-<img width="850" height="443" alt="image" src="https://github.com/user-attachments/assets/d6a01e5e-2966-4cc6-9506-c4d0194b31a1" />
+<img width="793" height="443" alt="image" src="https://github.com/user-attachments/assets/ffbecf48-c52c-4a62-9b88-b085bfafcc01" />
 
 ```py
 from category_encoders import BinaryEncoder
 df=pd.read_csv("data.csv")
 df
 ```
-<img width="622" height="427" alt="image" src="https://github.com/user-attachments/assets/851bf516-a46d-4c91-a371-be376972aa72" />
+<img width="581" height="446" alt="image" src="https://github.com/user-attachments/assets/0bf1a537-eab1-47e0-a3a0-c4b07f8e532b" />
 
 ```py
 be=BinaryEncoder()
 nd=be.fit_transform(df['Ord_2'])
 df
 ```
-<img width="629" height="442" alt="image" src="https://github.com/user-attachments/assets/ab81aa0f-b7eb-42b2-bd4d-6a5e42c349a4" />
+<img width="596" height="433" alt="image" src="https://github.com/user-attachments/assets/f2d9b4a6-e901-4932-8e47-e1fa909410d1" />
 
 ```py
 dfb=pd.concat([df,nd],axis=1)
 dfb
 ```
-<img width="882" height="448" alt="image" src="https://github.com/user-attachments/assets/7a909901-c36f-4448-a50d-40bdce058a38" />
 
 ```py
 from category_encoders import TargetEncoder
@@ -105,7 +104,7 @@ new=te.fit_transform(X=CC["City"],y=CC["Target"])
 CC=pd.concat([CC,new],axis=1)
 CC
 ```
-<img width="732" height="434" alt="image" src="https://github.com/user-attachments/assets/0f2c4204-3fb6-4e57-a26c-8a084732e1b0" />
+<img width="669" height="439" alt="image" src="https://github.com/user-attachments/assets/f147e125-28de-4848-910b-7e60e4ad5e8b" />
 
 ```py
 import pandas as pd
@@ -114,49 +113,49 @@ import numpy as np
 df=pd.read_csv("Data_to_Transform.csv")
 df
 ```
-<img width="1013" height="504" alt="image" src="https://github.com/user-attachments/assets/f90a5021-1675-493e-b1cb-9321656be392" />
+<img width="961" height="515" alt="image" src="https://github.com/user-attachments/assets/fb05289e-a1a7-4074-b145-d4a74c762e7c" />
 
 ```py
 df.skew()
 ```
-<img width="359" height="247" alt="image" src="https://github.com/user-attachments/assets/8f163a80-8c5e-4425-a5d2-0042ea135c6b" />
+<img width="364" height="244" alt="image" src="https://github.com/user-attachments/assets/eef4a70b-3ae8-472e-9e25-f6b2fdd13c79" />
 
 ```py
 np.log(df["Highly Positive Skew"])
 ```
-<img width="357" height="561" alt="image" src="https://github.com/user-attachments/assets/d2876d57-c7f2-488e-bfcc-dfad3e53c5e0" />
+<img width="295" height="559" alt="image" src="https://github.com/user-attachments/assets/dac0eb2c-2d1d-4c75-a185-2d9f713523ff" />
 
 ```py
 np.reciprocal(df["Moderate Positive Skew"])
 ```
-<img width="338" height="513" alt="image" src="https://github.com/user-attachments/assets/88f356b6-c5c9-4dc1-8849-13ac5b2e3112" />
+<img width="342" height="561" alt="image" src="https://github.com/user-attachments/assets/17cd6707-86c4-4de6-8e99-13d452833cb1" />
 
 ```py
 np.sqrt(df["Highly Positive Skew"])
 ```
-<img width="324" height="566" alt="image" src="https://github.com/user-attachments/assets/00867d87-a320-4562-87f8-2f888eab991f" />
+<img width="313" height="558" alt="image" src="https://github.com/user-attachments/assets/06e7f316-9b81-45d9-9ed4-750b6dce2e7b" />
 
 ```py
 np.square(df["Highly Positive Skew"])
 ```
-<img width="366" height="560" alt="image" src="https://github.com/user-attachments/assets/01c33dc5-c9bc-43a7-bff3-e28cbaa9eb13" />
+<img width="292" height="559" alt="image" src="https://github.com/user-attachments/assets/ab3a201d-2541-4b29-9c33-fb0bde56fd90" />
 
 ```py
 df["Highly Positive Skew_boxcox"], parameters=stats.boxcox(df["Highly Positive Skew"])
 df
 ```
-<img width="1296" height="519" alt="image" src="https://github.com/user-attachments/assets/21b6ef28-5993-4384-9fd9-78373f5ac421" />
+<img width="1255" height="511" alt="image" src="https://github.com/user-attachments/assets/fdc44cd0-c4cd-4859-afdc-dee83e88359b" />
 
 ```py
 df.skew()
 ```
-<img width="392" height="268" alt="image" src="https://github.com/user-attachments/assets/40bb22bc-1f31-4718-af4b-26a524e24312" />
+<img width="397" height="291" alt="image" src="https://github.com/user-attachments/assets/3425a113-ce74-4442-8738-b89eb84ab940" />
 
 ```py
 df["Highly Negative Skew_yeojohnson"],parameters=stats.yeojohnson(df["Highly Negative Skew"])
 df.skew()
 ```
-<img width="422" height="328" alt="image" src="https://github.com/user-attachments/assets/63f6f243-d1a0-4c4e-b739-50065f5eb989" />
+<img width="439" height="332" alt="image" src="https://github.com/user-attachments/assets/df8c674e-a3b6-4df3-8731-8534ac4fc476" />
 
 ```py
 from sklearn.preprocessing import QuantileTransformer
@@ -164,7 +163,7 @@ qt=QuantileTransformer(output_distribution='normal')
 df["Moderate Negative Skew_1"]=qt.fit_transform(df[["Moderate Negative Skew"]])
 df
 ```
-<img width="1353" height="539" alt="image" src="https://github.com/user-attachments/assets/048a6353-5ad4-409d-bbb1-a5af6437023b" />
+<img width="1660" height="545" alt="image" src="https://github.com/user-attachments/assets/ec255bc8-f05c-4dff-8cf9-b16d881aef3b" />
 
 ```py
 import seaborn as sns
